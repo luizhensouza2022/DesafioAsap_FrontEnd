@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguradora Asap | Criar Cadastro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./assets/css/base/base.css">
+    <link rel="stylesheet" href="./assets/css/cadastro.css">
+    <link rel="stylesheet" href="./assets/css/componentes/cartao.css">
+    <link rel="stylesheet" href="./assets/css/componentes/inputs.css">
+    <link rel="stylesheet" href="./assets/css/componentes/botao.css">
+</head>
+<body>
+    <div id="app">
+    <main class="container flex flex--coluna flex--centro">
+        <div class="cadastro-cabecalho">
+            <img src="./assets/img/seguradora.png" alt="Seguradora Asap" class="cadastro-cabecalho__logo">
+            <h1 class="cadastro-cabecalho__titulo">Seguradora Asap</h1>
+        </div>
+        <section class="cartao">
+            <h2 class="cartao__titulo">Complete seu cadastro</h2>
+            <form id="form" action="./cadastro_concluido.html" class="formulario flex flex--coluna">
+                <fieldset>
+                    <legend class="formulario__legenda">Informações Pessoais</legend>
+                    <div class="input-container">
+                        <input name="nome" id="nome" class="input" type="text" placeholder="Nome" data-tipo="nome" required>
+                        <label class="input-label" for="nome">Nome</label>
+                        <span class="input-mensagem-erro">Este campo não está válido</span>
+                    </div>
+                    <div class="input-container">
+                        <input name="nascimento" id="nascimento" class="input" type="date" placeholder="Data de nascimento" data-tipo="nascimento" required>
+                        <label class="input-label" for="nascimento">Data de nascimento</label>
+                        <span class="input-mensagem-erro">Este campo não está válido</span>
+                    </div>
+                    <div class="input-container">
+                        <input name="cpf" id="cpf" class="input" type="text" placeholder="CPF" data-tipo="cpf" required>
+                        <label class="input-label" for="cpf">CPF</label>
+                        <span class="input-mensagem-erro">Este campo não está válido</span>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend class="formulario__legenda">Endereço</legend>
+                    <div class="input-container">
+                        <input name="cep" id="cep" class="input" type="text" placeholder="CEP" pattern="[\d]{5}-?[\d]{3}" data-tipo="cep" required>
+                        <label class="input-label" for="cep">CEP</label>
+                        <span class="input-mensagem-erro">Este campo não está válido</span>
+                    </div>
+                    <div class="input-container">
+                        <input name="logradouro" id="logradouro" class="input" type="text" placeholder="Logradouro" data-tipo="logradouro" required>
+                        <label class="input-label" for="logradouro">Logradouro</label>
+                        <span class="input-mensagem-erro">Este campo não está válido</span>
+                    </div>
+                    <div class="input-container">
+                        <input name="cidade" id="cidade" class="input" type="text" placeholder="Cidade" data-tipo="cidade" required>
+                        <label class="input-label" for="cidade">Cidade</label>
+                        <span class="input-mensagem-erro">Este campo não está válido</span>
+                    </div>
+                    <div class="input-container">
+                        <input name="estado" id="estado" class="input" type="text" placeholder="Estado" data-tipo="estado" required>
+                        <label class="input-label" for="estado">Estado</label>
+                        <span class="input-mensagem-erro">Este campo não está válido</span>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend class="formulario__legenda">Informações da Ápolice</legend>
+                    <div class="input-container">
+                        <input name="apolice" id="apolice" class="input" type="number" placeholder="Apolice" pattern="[\d]{6}" data-tipo="apolice" required>
+                        <label class="input-label" for="apolice">Ápolice</label>
+                        <span class="input-mensagem-erro">Este campo não está válido</span>
+                    </div>
+                    <div class="input-container">
+                        <input name="placa" id="placa" class="input" type="text" placeholder="Número da Placa" pattern="^[A-Za-z]{3}-?[\d]{1}[a-zA-Z0-9]{1}[\d]{2}$" required>
+                        <label class="input-label" for="placa">Placa</label>
+                        <span class="input-mensagem-erro">Este campo não está válido</span>
+                    </div>
+                    <div class="input-container">
+                        <input name="dataInicial" id="dataInicial" class="input" type="date" placeholder="Data de Início" data-tipo="placa" required>
+                        <label class="input-label" for="dataInicial">Início</label>
+                        <span class="input-mensagem-erro">Este campo não está válido</span>
+                    </div>
+                    <div class="input-container">
+                        <input name="dataFinal" id="dataFinal" class="input" type="date" placeholder="Data Final" data-tipo="dataFinal" required>
+                        <label class="input-label" for="dataFinal">Fim</label>
+                        <span class="input-mensagem-erro">Este campo não está válido</span>
+                    </div>
+                    <div class="input-container">
+                        <input name="preco" id="preco" class="input" type="text" placeholder="Preço" data-tipo="preco" required>
+                        <label class="input-label" for="preco">Preço</label>
+                        <span class="input-mensagem-erro">Este campo não está válido</span>
+                    </div>
+                </fieldset>
+                <input id="botao" type="submit" value="Cadastrar" class="botao"/>
+            </form>
+        </section>
+        <table id="tabela" border="1">
+        <tbody id="dadosTr">
+            <thead>nome</thead>
+            <thead>nascimento</thead>
+            <thead>cpf</thead>
+            <thead>logradouro</thead>
+            <thead>cidade</thead>
+            <thead>estado</thead>
+            <thead>apolice</thead>
+            <thead>placa</ttheadd>
+            <thead>dataInicial</thead>
+            <thead>dataFinal</ttheadd>
+            <thead>preco</thead>
+            <thead>Status</thead>
+            <thead>Qtd dias</thead>
+        </tbody>
+    </table>
+    
+    
+    </main>
+
+    </div>
+    <script src="./js/app.js" type="module"></script>
+    <script src="https://github.com/codermarcos/simple-mask-money/releases/download/v3.0.0/simple-mask-money.js"></script>
+    <script>
+    botao.addEventListener("click", function(event){
+    //event.preventDefault();
+    var form = document.querySelector('#form')
+    var nome = form.nome.value
+    var nascimento = form.nascimento.value
+    var cpf = form.cpf.value
+    var cep = form.cep.value
+    var logradouro = form.logradouro.value
+    var cidade = form.cidade.value
+    var estado = form.estado.value
+    var apolice = form.apolice.value
+    var placa = form.placa.value
+    var dataInicial = form.dataInicial.value
+    var dataFinal = form.dataFinal.value
+    var preco = form.preco.value
+    var hoje = new Date()// Data de hoje
+    const fim = new Date(dataFinal); // Outra data no passado
+    const diff = Math.abs(hoje.getTime() - fim.getTime()); // Subtrai uma data pela outra
+    const dias = Math.ceil(diff / (1000 * 60 * 60 * 24))
+    
+    
+   if( hoje > fim ){
+        var status = "Vencido"
+        var prazo = (dias-1) + " dias vencido."
+    }
+    else{
+        var status = "Em Aberto"
+        var prazo = dias + " dias à vencer."
+    }
+
+    var dadosTr = document.createElement("tr");
+
+    var nomeTd = document.createElement("td");
+    var nascimentoTd = document.createElement("td");
+    var cpfTd = document.createElement("td");
+    var cepTd = document.createElement("td");
+    var logradouroTd = document.createElement("td");
+    var cidadeTd = document.createElement("td");
+    var estadoTd = document.createElement("td");
+    var apoliceTd = document.createElement("td");
+    var placaTd = document.createElement("td");
+    var dataInicialTd = document.createElement("td");
+    var dataFinalTd = document.createElement("td")
+    var precoTd = document.createElement("td");
+    var statusTd = document.createElement("td")
+    var prazoTd = document.createElement("td")
+    
+    nomeTd.textContent = nome;
+    nascimentoTd.textContent = nascimento;
+    cpfTd.textContent = cpf;
+    cepTd.textContent = cep;
+    logradouroTd.textContent = logradouro;
+    cidadeTd.textContent = cidade;
+    estadoTd.textContent = estado;
+    apoliceTd.textContent = apolice;
+    placaTd.textContent = placa;
+    dataInicialTd.textContent = dataInicial;
+    dataFinalTd.textContent = dataFinal;
+    precoTd.textContent = preco;
+    statusTd.textContent = status;
+    prazoTd.textContent = prazo
+
+    dadosTr.appendChild(nomeTd);
+    dadosTr.appendChild(nascimentoTd)
+    dadosTr.appendChild(cpfTd)
+    dadosTr.appendChild(cepTd)
+    dadosTr.appendChild(logradouroTd)
+    dadosTr.appendChild(cidadeTd)
+    dadosTr.appendChild(estadoTd)
+    dadosTr.appendChild(apoliceTd)
+    dadosTr.appendChild(placaTd)
+    dadosTr.appendChild(dataInicialTd)
+    dadosTr.appendChild(dataFinalTd)
+    dadosTr.appendChild(precoTd)
+    dadosTr.appendChild(statusTd)
+    dadosTr.appendChild(prazoTd)
+    var container = document.querySelector("#tabela")
+    container.innerHTML = dadosTr
+    console.log(dadosTr)
+    localStorage.setItem("resposta", document.querySelector("#tabela").outerHTML);
+
+})
+    </script>
+
+</body>
+</html>
